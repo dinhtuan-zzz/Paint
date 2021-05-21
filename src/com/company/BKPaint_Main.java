@@ -109,8 +109,8 @@ public class BKPaint_Main extends JFrame {
         }
     };*/
     public static void main(String[] args) {
-        new TextTool();                     // khá»Ÿi táº¡o cho TextTool, náº¡p toĂ n bá»™ font cá»§a há»‡ thá»‘ng
-        new BKPaint_Main().showFrame();   // Hiá»ƒn thá»‹ cá»­a sá»• Frame
+        new TextTool();                     // khoi tao cho TextTool, náº¡p toĂ n bá»™ font cá»§a há»‡ thá»‘ng
+        new BKPaint_Main().showFrame();   // Hien thi Frame co san
     }
 
     public BKPaint_Main(){
