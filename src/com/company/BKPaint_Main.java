@@ -48,7 +48,7 @@ public class BKPaint_Main extends JFrame {
 
     static Drawing drawArea;
     public static long scale;
-    static boolean isSaved;  // Ban Ä‘áº§u chÆ°a váº½ gĂ¬ -> khĂ´ng cáº§n save
+    static boolean isSaved;  
 
     static JButton curColor;
 
@@ -109,15 +109,15 @@ public class BKPaint_Main extends JFrame {
         }
     };*/
     public static void main(String[] args) {
-        new TextTool();                     // khá»Ÿi táº¡o cho TextTool, náº¡p toĂ n bá»™ font cá»§a há»‡ thá»‘ng
-        new BKPaint_Main().showFrame();   // Hiá»ƒn thá»‹ cá»­a sá»• Frame
+        new TextTool();                     // khoi tao cho TextTool, nap toan bo font can hien thi
+        new BKPaint_Main().showFrame();   // hien thi frame co san
     }
 
     public BKPaint_Main(){
         scale = 0;
         isSaved = true;
 
-        /*btnBlack = new JButton(" ");                // Báº£ng chá»�n mĂ u nhanh
+        /*btnBlack = new JButton(" ");                // Bang chon mau nhanh
         btnBlack.addActionListener(actionListener);
         btnBlack.setBackground(Color.black);
         btnBlack.setSize(25, 25);
@@ -531,7 +531,7 @@ public class BKPaint_Main extends JFrame {
         replayContainer.add(chkVid);
 
 
-        // Táº O VIDEO REPLAY ------------------
+        // Tao VIDEO REPLAY ------------------
         Icon iconVideo = new ImageIcon(getClass().getResource("icons/Rotate Left.png"));
         btnVid.setIcon(iconVideo);
         replayContainer.add(btnVid);
@@ -557,7 +557,7 @@ public class BKPaint_Main extends JFrame {
 
         JCheckBox chkShift = new JCheckBox("Shift");         // Shift check box -----------------------------
         chkShift.setMnemonic(KeyEvent.VK_Q);
-        chkShift.addItemListener(e -> DrawingShape.isShift =           // báº¯t sá»± kiá»‡n cho checkbox
+        chkShift.addItemListener(e -> DrawingShape.isShift =           // bat su kien cho checkbox
                 e.getStateChange() == ItemEvent.SELECTED);
         //controlPanel.add(chkShift);
         controlPanel.add(new JLabel(" "));
@@ -595,7 +595,7 @@ public class BKPaint_Main extends JFrame {
         });
         controlPanel.add(new JLabel(" "));
 
-        // HELP button: CĂ�C CHá»ˆ DáºªN Vá»€ PHĂ�M Táº®T -------------
+        // HELP button: cac phim tat -------------
         controlPanel.add(btnHelp);
         btnHelp.setMargin(new Insets(-1, -1,-1,-1));
         Icon iconHelp = new ImageIcon(getClass().getResource("icons/info.png"));
@@ -607,7 +607,7 @@ public class BKPaint_Main extends JFrame {
                 JOptionPane.showMessageDialog(null,
                         "1. Alt + C to Clear All\n" +
                                 "2. Alt + E to use Eraser Tool\n" +
-                                "3. Alt + D to turn on Fill Tool\n" + //ALT + F KHĂ”NG KHáº¢ Dá»¤NG
+                                "3. Alt + D to turn on Fill Tool\n" + 
                                 "4. Alt + O to Open image\n" +
                                 "5. Alt + S to Save file as .png image\n" +
                                 "6. Alt + T to choose Text Tool\n" +
@@ -670,7 +670,7 @@ public class BKPaint_Main extends JFrame {
 
 
         colorPanel.add(new JLabel("  "));
-        JButton del = new JButton("Delete Records");   // XĂ“A CĂ�C Báº¢N GHI Cá»¦A VIDEO REPLAY ----------------
+        JButton del = new JButton("Delete Records");   // xoa cac ban VIDEO REPLAY ----------------
         colorPanel.add(del);
         colorPanel.add(new JLabel("  "));
         del.setMargin(new Insets(0,1,0,1));
@@ -703,7 +703,7 @@ public class BKPaint_Main extends JFrame {
         btnZoomIn.addActionListener(e -> Zoom(false));
         colorPanel.add(btnZoomIn);
 
-        drawArea.addMouseWheelListener(e -> {                       // Sá»± kiá»‡n lÄƒn chuá»™t ------------------
+        drawArea.addMouseWheelListener(e -> {                       // su kien lan chuot ------------------
             int steps = e.getWheelRotation();
             scale -= steps*5;
             try {
@@ -716,7 +716,7 @@ public class BKPaint_Main extends JFrame {
         frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         frame.addWindowListener(new WindowAdapter() {
             @Override
-            public void windowClosing(WindowEvent e) {      // sá»± kiá»‡n close window -------------
+            public void windowClosing(WindowEvent e) {      // su kien close window -------------
 
                 if(!isSaved) {
                     Icon icon = new ImageIcon(getClass().getResource("image/logo2.png"));
@@ -778,7 +778,7 @@ public class BKPaint_Main extends JFrame {
         frame.setVisible(true);
     }
 
-    public JMenuBar CreateMenu(){                   // Táº¡o MENU cho chÆ°Æ¡ng trĂ¬nh ---------------------------
+    public JMenuBar CreateMenu(){                   // tao menu cho chuong trinh ---------------------------
         JMenuBar menuBar = new JMenuBar();
         JMenu menuFile = new JMenu(" File ");
         JMenu menuEdit = new JMenu(" Edit ");
@@ -826,8 +826,8 @@ public class BKPaint_Main extends JFrame {
         return menuBar;
     }
 
-    void Zoom(boolean isZoomOut){               // Zoom khi báº¥m nĂºt
-        scale += (isZoomOut)? -10:10;           // scale tÄƒng/giáº£m má»™t lÆ°á»£ng cá»‘ Ä‘á»‹nh
+    void Zoom(boolean isZoomOut){               // Zoom khi bam vao
+        scale += (isZoomOut)? -10:10;           // scale tang giam theo gia tri isZoomOut
         try {
             drawArea.Open(ResizeImage.scale(Drawing.buffImg2, Drawing.fwidth, Drawing.fheight, scale));
             float a = (int)((scale/200f + 1) * 10000) / 100f;
@@ -837,8 +837,8 @@ public class BKPaint_Main extends JFrame {
             JOptionPane.showMessageDialog(null, "Too small/large !");
         }
     }
-    void Zoom(long scale){                      // Zoom khi lÄƒn chuá»™t
-        try {                                   // scale tÄƒng/giáº£m phá»¥ thuá»™c Ä‘á»™ lÄƒn cá»§a chuá»™t
+    void Zoom(long scale){                      // Zoom khi lan chuot
+        try {                                   // scale tang giam khi lan chuot
 //            scale -= scale % 5;
             drawArea.Open(ResizeImage.scale(Drawing.buffImg2, Drawing.fwidth, Drawing.fheight, scale));
             float a = (int)((scale/200f + 1) * 10000) / 100f;
