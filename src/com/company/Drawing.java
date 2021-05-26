@@ -88,7 +88,6 @@ public class Drawing extends JComponent {
                 BKPaint_Main.isSaved = false;                 // ảnh chưa được lưu
                 oldX = e.getX();
                 oldY = e.getY();
-
                 bfImg[index] = copyImage(buffImg);
                 frameArr[index] = numFrame;                 // lưu lại từng frame và chỉ số
                 if (index == MAX_UNDO - 1) {                  // nếu số lượt undo đạt giới hạn
@@ -143,7 +142,6 @@ public class Drawing extends JComponent {
                     TextTool.insertText(graphic2d, e.getX(), e.getY());
                     repaint();
                 }
-//                image = buffImg;
                 if(isRecord) CapFrame();          // LƯU CÁC FRAME VÀO FILE ẢNH JPG PHỤC VỤ CHO VIỆC CHIẾU VIDEO REPLAY
             }
         });
@@ -164,11 +162,7 @@ public class Drawing extends JComponent {
                 }
                 if(isShape){
                     if(!DrawingShape.isPressed) {
-//                        buffImg2 = copyImage((BufferedImage) image);
-//                        bfImg[index] = copyImage(buffImg2);
                         DrawingShape.isPressed = true;
-//                        graphic2d = (Graphics2D) buffImg.getGraphics();
-//                        repaint();
                     }
                     else{
                         buffImg = copyImage(bfImg[index-1]);
@@ -183,15 +177,6 @@ public class Drawing extends JComponent {
                         DrawingShape.createShape(new Point(oldX, oldY), new Point(e.getX(), e.getY()), graphic2d);
                         if (isRecord) CapFrame();
                     }
-//                    frameArr[index] = numFrame;                 // lưu lại từng frame và chỉ số
-//                    if (index == MAX_UNDO - 1) {                  // nếu số lượt undo đạt giới hạn
-//                        for (int i = 0; i < MAX_UNDO - 1; i++) {
-//                            bfImg[i] = copyImage(bfImg[i + 1]);
-//                            frameArr[i] = frameArr[i + 1];
-//                        }
-//                    } else {
-//                        index++;
-//                    }
 
                 }
             }
@@ -273,8 +258,6 @@ public class Drawing extends JComponent {
                 Open(ResizeImage.scale(buffImg, fwidth, fheight, BKPaint_Main.scale));
                 repaint();
             } catch (Exception e) {
-                //e.printStackTrace();
-            	//JOptionPane.showMessageDialog(null, "End of redo", null, JOptionPane.INFORMATION_MESSAGE);
                 index--;
             }
         }
@@ -335,7 +318,6 @@ public class Drawing extends JComponent {
 
     public void Draw() {            // THAY ĐỔI MÀU SẮC CHO BÚT VẼ MỖI KHI BẤM CHỌN MÀU TRÊN BẢNG CHỌN MÀU (ColorPanel)
         System.setProperty("myColor", ChosenColor);
-//        color = Color.getColor("myColor");
         isColorChooser = false;
         graphic2d.setPaint(color);
         BKPaint_Main.curColor.setBackground(Color.getColor("myColor"));
