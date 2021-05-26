@@ -19,7 +19,6 @@ public class ColoredPainting {
                 " Plane", " Bus", " Birtday's cake", " Flower", " Apple",
                 " Submarine", " Ship", " Train"};
         JComboBox drowDown = new JComboBox(ColoredPainting);
-//        controlPanel.add(drowDown);
         String Dir1 = System.getProperty("user.dir") + "\\src\\hinhcosan\\";
         String[] listImageSrc = {"10.png","tho.jpg", "cat.jpg", "cho.jpg",
                 "ong.png", "buom.jpg", "bay.jpg", "bus.jpg", "banh.jpg",
