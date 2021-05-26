@@ -8,22 +8,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class BKPaint_Main extends JFrame {
-    /*private JButton btnBlack;
-    private JButton btnGreen;
-    private JButton btnRed;
-    private JButton btnBlue;
-    private JButton btnGray;
-    private JButton btnYellow;
-    private JButton btnMagenta;
-    private JButton btnCyan;
-    private JButton btnDarkGray;
-    private JButton btnOrange;
-    private JButton btnTeal;
-    private JButton btnLime;
-    private JButton btnOlive;
-    private JButton btnMaroon;
-    private JButton btnPurple;
-    private JButton btnBrown;*/
+    
 
     private JButton btnClear;
     private JButton btnEraser;
@@ -52,62 +37,7 @@ public class BKPaint_Main extends JFrame {
 
     static JButton curColor;
 
-    /*ActionListener actionListener = new ActionListener() {          // sá»± kiá»‡n cho cĂ¡c nĂºt trong báº£ng chá»�n mĂ u nhanh
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            Drawing.isEraser = false;
-            btnEraser.setBackground(null);
-            if (e.getSource() == btnBlack) {
-                Drawing.ChosenColor = "0x000000";
-                drawArea.Draw();
-            } else if (e.getSource() == btnGreen) {
-                Drawing.ChosenColor = "0x006600";
-                drawArea.Draw();
-            } else if (e.getSource() == btnRed) {
-                Drawing.ChosenColor = "0xFF0000";
-                drawArea.Draw();
-            } else if (e.getSource() == btnBlue) {
-                Drawing.ChosenColor = "0x0000FF";
-                drawArea.Draw();
-            } else if (e.getSource() == btnGray) {
-                Drawing.ChosenColor = "0xC0C0C0";
-                drawArea.Draw();
-            } else if (e.getSource() == btnMagenta) {
-                Drawing.ChosenColor = "0xFF00FF";
-                drawArea.Draw();
-            } else if (e.getSource() == btnYellow) {
-                Drawing.ChosenColor = "0xFFFF00";
-                drawArea.Draw();
-            } else if (e.getSource() == btnDarkGray) {
-                Drawing.ChosenColor = "0x808080";
-                drawArea.Draw();
-            } else if (e.getSource() == btnCyan) {
-                Drawing.ChosenColor = "0x00FFFF";
-                drawArea.Draw();
-            } else if (e.getSource() == btnOrange) {
-                Drawing.ChosenColor = "0xFF9900";
-                drawArea.Draw();
-            } else if (e.getSource() == btnBrown) {
-                Drawing.ChosenColor = "0x663300";
-                drawArea.Draw();
-            } else if (e.getSource() == btnTeal) {
-                Drawing.ChosenColor = "0x008080";
-                drawArea.Draw();
-            } else if (e.getSource() == btnPurple) {
-                Drawing.ChosenColor = "0x800080";
-                drawArea.Draw();
-            } else if (e.getSource() == btnMaroon) {
-                Drawing.ChosenColor = "0x800000";
-                drawArea.Draw();
-            } else if (e.getSource() == btnOlive) {
-                Drawing.ChosenColor = "0x808000";
-                drawArea.Draw();
-            } else if (e.getSource() == btnLime) {
-                Drawing.ChosenColor = "0x00FF00";
-                drawArea.Draw();
-            }
-        }
-    };*/
+    
     public static void main(String[] args) {
     	//<<<<<<< HEAD
         new TextTool();                     // khoi tao cho TextTool, náº¡p toĂ n bá»™ font cá»§a há»‡ thá»‘ng
@@ -120,77 +50,7 @@ public class BKPaint_Main extends JFrame {
         scale = 0;
         isSaved = true;
 
-        /*btnBlack = new JButton(" ");                // Bang chon mau nhanh
-        btnBlack.addActionListener(actionListener);
-        btnBlack.setBackground(Color.black);
-        btnBlack.setSize(25, 25);
-
-        btnGreen = new JButton(" ");
-        btnGreen.addActionListener(actionListener);
-        System.setProperty("green", "0x006600");
-        btnGreen.setBackground(Color.getColor("green"));
-
-        btnRed = new JButton(" ");
-        btnRed.addActionListener(actionListener);
-        btnRed.setBackground(Color.RED);
-
-        btnBlue = new JButton(" ");
-        btnBlue.addActionListener(actionListener);
-        btnBlue.setBackground(Color.blue);
-
-        btnGray = new JButton(" ");
-        btnGray.addActionListener(actionListener);
-        btnGray.setBackground(Color.gray);
-
-        btnMagenta = new JButton(" ");
-        btnMagenta.addActionListener(actionListener);
-        btnMagenta.setBackground(Color.magenta);
-
-        btnYellow = new JButton(" ");
-        btnYellow.addActionListener(actionListener);
-        btnYellow.setBackground(Color.yellow);
-
-        btnDarkGray = new JButton(" ");
-        btnDarkGray.addActionListener(actionListener);
-        btnDarkGray.setBackground(Color.darkGray);
-
-        btnCyan = new JButton(" ");
-        btnCyan.addActionListener(actionListener);
-        btnCyan.setBackground(Color.cyan);
-
-        btnOrange = new JButton(" ");
-        btnOrange.addActionListener(actionListener);
-        btnOrange.setBackground(Color.orange);
-
-        btnTeal = new JButton(" ");
-        btnTeal.addActionListener(actionListener);
-        System.setProperty("teal", "0x008080");
-        btnTeal.setBackground(Color.getColor("teal"));
-
-        btnLime = new JButton(" ");
-        btnLime.addActionListener(actionListener);
-        System.setProperty("lime", "0x00FF80");
-        btnLime.setBackground(Color.getColor("lime"));
-
-        btnPurple = new JButton(" ");
-        btnPurple.addActionListener(actionListener);
-        System.setProperty("purple", "0x800080");
-        btnPurple.setBackground(Color.getColor("purple"));
-
-        btnOlive = new JButton(" ");
-        btnOlive.addActionListener(actionListener);
-        System.setProperty("olive", "0x808000");
-        btnOlive.setBackground(Color.getColor("olive"));
-
-        btnMaroon = new JButton(" ");
-        btnMaroon.addActionListener(actionListener);
-        System.setProperty("maroon", "0x800000");
-        btnMaroon.setBackground(Color.getColor("maroon"));
-
-        btnBrown = new JButton(" ");
-        btnBrown.addActionListener(actionListener);
-        System.setProperty("brown", "0x663300");
-        btnBrown.setBackground(Color.getColor("brown"));*/
+       
         
 
         btnClear = new JButton("CLEAR ");
@@ -635,25 +495,7 @@ public class BKPaint_Main extends JFrame {
 
         colorPanel.add(curColor);
         colorPanel.add(ratio);
-        /*colorPanel.add(btnGray);
-        colorPanel.add(btnDarkGray);
-        colorPanel.add(btnBlack); //1
-        colorPanel.add(btnBrown);
-        colorPanel.add(btnMaroon);
-
-        colorPanel.add(btnPurple);
-
-        colorPanel.add(btnMagenta);
-        colorPanel.add(btnRed);
-        colorPanel.add(btnOrange);
-        colorPanel.add(btnYellow);
-        colorPanel.add(btnLime);
-        colorPanel.add(btnCyan);
-        colorPanel.add(btnTeal);
-        colorPanel.add(btnGreen);
-        colorPanel.add(btnOlive); //16
-        colorPanel.add(btnBlue);*/
-
+       
 
 
 
@@ -748,13 +590,6 @@ public class BKPaint_Main extends JFrame {
                 }
             }
         });
-//        frame.addKeyListener(new KeyAdapter() {
-//            @Override
-//            public void keyPressed(KeyEvent e) {
-//                if(e.getKeyCode() == KeyEvent.VK_SHIFT)
-//                DrawingShape.isShift = !DrawingShape.isShift;
-//            }
-//        });
 
         frame.setJMenuBar(CreateMenu());
         int h = Toolkit.getDefaultToolkit().getScreenSize().height;
@@ -810,10 +645,7 @@ public class BKPaint_Main extends JFrame {
             scale = 0;
         });
         iSave.addActionListener(e -> {
-//            Drawing.isFilling = false;
-//            btnFill.setBackground(null);
-//            Drawing.isEraser = false;
-//            btnEraser.setBackground(null);
+
             OpenAndSaveImage save = new OpenAndSaveImage();
             isSaved = save.SaveImg(Drawing.image);
         });
