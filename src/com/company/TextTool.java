@@ -9,11 +9,6 @@ import java.util.Objects;
 import javax.swing.*;
 import javax.swing.plaf.basic.BasicComboBoxRenderer;
 
-/**
- * @author Lam Nguyen
- *
- */
-
 public class TextTool extends Component {
 
     private static int textSizeIndex;               // for lists used in combo boxes
